@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `tscb`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `The Soap Class Bali`,
+    author: "@stonebinox",
+    siteUrl: `https://tscbsite.gatsbyjs.io/`,
   },
   plugins: [
     {
