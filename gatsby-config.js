@@ -35,7 +35,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/emarald.png`,
+        icon: `src/images/icon.png`,
       },
     },
   ],
