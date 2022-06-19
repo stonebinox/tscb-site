@@ -26,3 +26,16 @@ export const Description = styled.p`
   font-size: 32px;
   letter-spacing: 1px;
 `;
+
+export const Button = styled.button`
+  background-color: #000;
+  font-family: "Paragraph",
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  padding: ${spacing.BASE_SPACING};
+  letter-spacing: 1px;
+  outline: 0;
+  margin-right: ${spacing.BASE_SPACING};
+`;

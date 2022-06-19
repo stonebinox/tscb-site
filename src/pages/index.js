@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import {
+  Button,
   Description,
   PageContainer,
   PageContent,
@@ -43,6 +44,8 @@ const IndexPage = () => {
           <div>
             <PageTitle>{title}</PageTitle>
             <Description>{description}</Description>
+            <Button>Kelas Offline</Button>
+            <Button>Kelas Online</Button>
           </div>
         </ContentContainer>
       </PageContent>
