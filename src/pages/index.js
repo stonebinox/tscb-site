@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {
   Button,
   Description,
+  Footer,
   PageContainer,
   PageContent,
   PageTitle,
@@ -19,11 +20,41 @@ const LogoContainer = styled.div`
   height: ${spacing.customSpacing("80px")};
   margin: 0 auto;
   margin-bottom: ${spacing.DOUBLE_BASE_SPACING};
+
+  @media (max-width: ${spacing.customSpacing("412px")}) {
+    margin-bottom: 0;
+  }
 `;
 
 export const ContentContainer = styled.div`
   width: 100%;
   margin-top: ${spacing.customSpacing("128px")};
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: ${spacing.customSpacing("412px")}) {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+`;
+
+export const HeroImage = styled.div`
+  width: 350px;
+  height: 300px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  box-shadow: 0px 2px 20px #888;
+  border-radius: 4px;
+  margin-right: ${spacing.DOUBLE_BASE_SPACING};
+  margin-left: ${spacing.BASE_SPACING};
+
+  @media (max-width: ${spacing.customSpacing("412px")}) {
+    margin-top: ${spacing.DOUBLE_BASE_SPACING};
+    margin-bottom: ${spacing.DOUBLE_BASE_SPACING};
+  }
 `;
 
 const IndexPage = () => {
@@ -31,6 +62,9 @@ const IndexPage = () => {
     title,
     pageTitle,
     description: { description },
+    heroImage: {
+      file: { url, fileName },
+    },
   } = useHomePage();
 
   return (
@@ -47,8 +81,15 @@ const IndexPage = () => {
             <Button>Kelas Offline</Button>
             <Button>Kelas Online</Button>
           </div>
+          <HeroImage
+            style={{
+              background: `url(${url}) center`,
+              backgroundSize: "cover",
+            }}
+          />
         </ContentContainer>
       </PageContent>
+      <Footer>The Soap Class Bali &copy; {new Date().getFullYear()}</Footer>
     </PageContainer>
   );
 };

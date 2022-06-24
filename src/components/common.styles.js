@@ -5,6 +5,10 @@ import { spacing } from "../utils/spacing";
 export const PageContainer = styled.div`
   margin: 0;
   padding: 0;
+
+  @media (max-width: ${spacing.customSpacing("412px")}) {
+    overflow-x: hidden;
+  }
 `;
 
 export const PageContent = styled.div`
@@ -12,6 +16,10 @@ export const PageContent = styled.div`
   width: 100%;
   max-width: ${spacing.customSpacing("1280px")};
   margin: 0 auto;
+
+  @media (max-width: ${spacing.customSpacing("412px")}) {
+    padding: ${spacing.HALF_BASE_SPACING};
+  }
 `;
 
 export const PageTitle = styled.h1`
@@ -25,6 +33,10 @@ export const Description = styled.p`
   color: #333;
   font-size: 32px;
   letter-spacing: 1px;
+
+  @media (max-width: ${spacing.customSpacing("412px")}) {
+    font-size: 24px;
+  }
 `;
 
 export const Button = styled.button`
@@ -38,4 +50,17 @@ export const Button = styled.button`
   letter-spacing: 1px;
   outline: 0;
   margin-right: ${spacing.BASE_SPACING};
+`;
+
+export const Footer = styled.div`
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  text-align: center;
+  padding: ${spacing.QUARTER_BASE_SPACING};
+  font-family: "Paragraph";
+  color: #333;
+  background-color: #fff;
 `;

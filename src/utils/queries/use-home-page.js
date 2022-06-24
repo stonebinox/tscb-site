@@ -12,6 +12,12 @@ export const useHomePage = () => {
           description {
             description
           }
+          heroImage {
+            file {
+              url
+              fileName
+            }
+          }
         }
       }
     }
