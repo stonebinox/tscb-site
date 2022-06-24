@@ -47,7 +47,7 @@ export const HeroImage = styled.div`
   }
 `;
 
-const IndexPage = () => {
+const OfflinePage = () => {
   const {
     title,
     pageTitle,
@@ -55,7 +55,7 @@ const IndexPage = () => {
     heroImage: {
       file: { url, fileName },
     },
-  } = useHomePage("home");
+  } = useHomePage("offline");
 
   return (
     <PageContainer>
@@ -68,10 +68,7 @@ const IndexPage = () => {
           <div>
             <PageTitle>{title}</PageTitle>
             <Description>{description}</Description>
-            <Button onClick={() => (window.location = "/offline")}>
-              Kelas Offline
-            </Button>
-            <Button>Kelas Online</Button>
+            <Button>Hubungi Kami</Button>
           </div>
           <HeroImage
             style={{
@@ -86,4 +83,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default OfflinePage;

@@ -1,6 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-export const useHomePage = () => {
+const types = {
+  home: 0,
+  offline: 1,
+};
+
+export const useHomePage = (type) => {
+  const node = types[type];
+
   const {
     allContentfulHome: { nodes },
   } = useStaticQuery(graphql`
@@ -23,7 +30,7 @@ export const useHomePage = () => {
     }
   `);
 
-  const mainNode = nodes[0];
+  const mainNode = nodes[node];
 
   return mainNode;
 };

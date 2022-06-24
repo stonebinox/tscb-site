@@ -50,6 +50,7 @@ export const Button = styled.button`
   letter-spacing: 1px;
   outline: 0;
   margin-right: ${spacing.BASE_SPACING};
+  cursor: pointer;
 `;
 
 export const Footer = styled.div`
@@ -63,4 +64,16 @@ export const Footer = styled.div`
   font-family: "Paragraph";
   color: #333;
   background-color: #fff;
+`;
+
+export const LogoContainer = styled.div`
+  width: 80%;
+  height: ${spacing.customSpacing("80px")};
+  margin: 0 auto;
+  margin-bottom: ${spacing.DOUBLE_BASE_SPACING};
+  cursor: pointer;
+
+  @media (max-width: ${spacing.customSpacing("412px")}) {
+    margin-bottom: 0;
+  }
 `;
