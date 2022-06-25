@@ -55,7 +55,10 @@ const IndexPage = () => {
     heroImage: {
       file: { url, fileName },
     },
+    photos = [],
   } = useHomePage("home");
+
+  console.log(photos);
 
   return (
     <PageContainer>
@@ -67,7 +70,7 @@ const IndexPage = () => {
         <ContentContainer>
           <div>
             <PageTitle>{title}</PageTitle>
-            <Description>{description}</Description>
+            <Description dangerouslySetInnerHTML={{ __html: description }} />
             <Button onClick={() => (window.location = "/offline")}>
               Kelas Offline
             </Button>

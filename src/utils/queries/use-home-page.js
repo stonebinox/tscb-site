@@ -1,14 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const types = {
-  home: 0,
-  offline: 1,
-  online: 2,
-};
-
 export const useHomePage = (type) => {
-  const node = types[type];
-
   const {
     allContentfulHome: { nodes },
   } = useStaticQuery(graphql`
@@ -26,12 +18,17 @@ export const useHomePage = (type) => {
               fileName
             }
           }
+          key
+          photos {
+            url
+            title
+          }
         }
       }
     }
   `);
 
-  const mainNode = nodes[node];
+  const mainNode = nodes?.find((node) => node?.key === type);
 
   return mainNode;
 };
