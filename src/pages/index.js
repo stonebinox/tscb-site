@@ -9,6 +9,8 @@ import {
   PageContent,
   PageTitle,
   LogoContainer,
+  PhotosContainer,
+  Photo,
 } from "../components/common.styles";
 import Seo from "../components/seo";
 import { useHomePage } from "../utils/queries/use-home-page";
@@ -85,6 +87,17 @@ const IndexPage = () => {
             }}
           />
         </ContentContainer>
+        <PhotosContainer>
+          {photos?.map((photo, index) => (
+            <Photo
+              key={index}
+              style={{
+                background: `url(${photo.url}) center`,
+                backgroundSize: "cover",
+              }}
+            />
+          ))}
+        </PhotosContainer>
       </PageContent>
       <Footer>The Soap Class Bali &copy; {new Date().getFullYear()}</Footer>
     </PageContainer>

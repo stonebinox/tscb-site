@@ -78,3 +78,19 @@ export const LogoContainer = styled.div`
     margin-bottom: 0;
   }
 `;
+
+export const PhotosContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: ${spacing.customSpacing("128px")};
+  margin-bottom: ${spacing.DOUBLE_BASE_SPACING};
+`;
+
+export const Photo = styled.div`
+  width: 400px;
+  height: 400px;
+  margin-right: ${spacing.BASE_SPACING};
+  margin-bottom: ${spacing.BASE_SPACING};
+  border-radius: 4px;
+`;
