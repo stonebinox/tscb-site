@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 const types = {
   home: 0,
   offline: 1,
+  online: 2,
 };
 
 export const useHomePage = (type) => {

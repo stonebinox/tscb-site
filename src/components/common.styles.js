@@ -51,6 +51,7 @@ export const Button = styled.button`
   outline: 0;
   margin-right: ${spacing.BASE_SPACING};
   cursor: pointer;
+  margin-bottom: ${spacing.BASE_SPACING};
 `;
 
 export const Footer = styled.div`

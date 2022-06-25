@@ -71,7 +71,9 @@ const IndexPage = () => {
             <Button onClick={() => (window.location = "/offline")}>
               Kelas Offline
             </Button>
-            <Button>Kelas Online</Button>
+            <Button onClick={() => (window.location = "/online")}>
+              Kelas Online
+            </Button>
           </div>
           <HeroImage
             style={{

@@ -47,7 +47,7 @@ export const HeroImage = styled.div`
   }
 `;
 
-const OfflinePage = () => {
+const OnlinePage = () => {
   const {
     title,
     pageTitle,
@@ -55,7 +55,7 @@ const OfflinePage = () => {
     heroImage: {
       file: { url, fileName },
     },
-  } = useHomePage("offline");
+  } = useHomePage("online");
 
   return (
     <PageContainer>
@@ -68,7 +68,6 @@ const OfflinePage = () => {
           <div>
             <PageTitle>{title}</PageTitle>
             <Description dangerouslySetInnerHTML={{ __html: description }} />
-            <Button>Hubungi Kami</Button>
           </div>
           <HeroImage
             style={{
@@ -77,10 +76,13 @@ const OfflinePage = () => {
             }}
           />
         </ContentContainer>
+        <Button>kelas membuat sabun padat alami</Button>
+        <Button>kelas membuat sabun cair alami</Button>
+        <Button>kelas membuat kosmetik dasar</Button>
       </PageContent>
       <Footer>The Soap Class Bali &copy; {new Date().getFullYear()}</Footer>
     </PageContainer>
   );
 };
 
-export default OfflinePage;
+export default OnlinePage;
