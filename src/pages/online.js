@@ -9,6 +9,8 @@ import {
   PageContent,
   PageTitle,
   LogoContainer,
+  PhotosContainer,
+  Photo,
 } from "../components/common.styles";
 import Seo from "../components/seo";
 import { useHomePage } from "../utils/queries/use-home-page";
@@ -55,6 +57,7 @@ const OnlinePage = () => {
     heroImage: {
       file: { url, fileName },
     },
+    photos = [],
   } = useHomePage("online");
 
   return (
@@ -79,6 +82,17 @@ const OnlinePage = () => {
         <Button>kelas membuat sabun padat alami</Button>
         <Button>kelas membuat sabun cair alami</Button>
         <Button>kelas membuat kosmetik dasar</Button>
+        <PhotosContainer>
+          {photos?.map((photo, index) => (
+            <Photo
+              key={index}
+              style={{
+                background: `url(${photo.url}) center`,
+                backgroundSize: "cover",
+              }}
+            />
+          ))}
+        </PhotosContainer>
       </PageContent>
       <Footer>The Soap Class Bali &copy; {new Date().getFullYear()}</Footer>
     </PageContainer>

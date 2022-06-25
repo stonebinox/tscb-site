@@ -60,8 +60,6 @@ const IndexPage = () => {
     photos = [],
   } = useHomePage("home");
 
-  console.log(photos);
-
   return (
     <PageContainer>
       <Seo title={pageTitle} description={pageTitle} meta={[]} />
