@@ -6,7 +6,7 @@ export const PageContainer = styled.div`
   margin: 0;
   padding: 0;
 
-  @media (max-width: ${spacing.customSpacing("412px")}) {
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
     overflow-x: hidden;
   }
 `;
@@ -17,7 +17,7 @@ export const PageContent = styled.div`
   max-width: ${spacing.customSpacing("1280px")};
   margin: 0 auto;
 
-  @media (max-width: ${spacing.customSpacing("412px")}) {
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
     padding: ${spacing.HALF_BASE_SPACING};
   }
 `;
@@ -34,7 +34,7 @@ export const Description = styled.p`
   font-size: 32px;
   letter-spacing: 1px;
 
-  @media (max-width: ${spacing.customSpacing("412px")}) {
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
     font-size: 24px;
   }
 `;
@@ -74,7 +74,7 @@ export const LogoContainer = styled.div`
   margin-bottom: ${spacing.DOUBLE_BASE_SPACING};
   cursor: pointer;
 
-  @media (max-width: ${spacing.customSpacing("412px")}) {
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
     margin-bottom: 0;
   }
 `;

@@ -26,7 +26,7 @@ export const ContentContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: ${spacing.customSpacing("412px")}) {
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 0;
@@ -43,7 +43,7 @@ export const HeroImage = styled.div`
   margin-right: ${spacing.DOUBLE_BASE_SPACING};
   margin-left: ${spacing.BASE_SPACING};
 
-  @media (max-width: ${spacing.customSpacing("412px")}) {
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
     margin-top: ${spacing.DOUBLE_BASE_SPACING};
     margin-bottom: ${spacing.DOUBLE_BASE_SPACING};
   }
