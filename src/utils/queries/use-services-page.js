@@ -1,12 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-export const useHomePage = (type) => {
+export const useServicesPage = (type) => {
   const {
-    allContentfulHome: { nodes },
+    allContentfulServicesPage: { nodes },
   } = useStaticQuery(graphql`
     query servicePageeQuery {
       allContentfulServicesPage {
         nodes {
+          pageTitle
           service {
             itemName
             itemDescription {
