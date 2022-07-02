@@ -4,7 +4,6 @@ import styled from "styled-components";
 import {
   Button,
   Description,
-  Footer,
   PageContainer,
   PageContent,
   PageTitle,
@@ -19,6 +18,7 @@ import { useHomePage } from "../utils/queries/use-home-page";
 import { spacing } from "../utils/spacing";
 import Logo from "../images/logo.png";
 import "../fonts/fonts.css";
+import { Footer } from "../components/footer";
 
 const OnlinePage = () => {
   const {
@@ -65,7 +65,7 @@ const OnlinePage = () => {
           ))}
         </PhotosContainer>
       </PageContent>
-      <Footer>The Soap Class Bali &copy; {new Date().getFullYear()}</Footer>
+      <Footer />
     </PageContainer>
   );
 };

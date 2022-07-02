@@ -2,6 +2,7 @@ import React from "react";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 import {
+  Button,
   ContentContainer,
   Description,
   HeroImage,
@@ -36,6 +37,10 @@ const AboutPage = () => {
                 __html: documentToHtmlString(JSON.parse(raw)),
               }}
             />
+            <Button onClick={() => (window.location = "/services")}>
+              Kelas Kami
+            </Button>
+            <Button>Hubungi Kami</Button>
           </div>
           <HeroImage
             style={{

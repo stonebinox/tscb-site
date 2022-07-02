@@ -62,7 +62,7 @@ export const Button = styled.button`
   }
 `;
 
-export const Footer = styled.div`
+export const FooterContainer = styled.div`
   position: fixed;
   width: 100%;
   left: 0;
