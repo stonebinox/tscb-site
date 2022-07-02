@@ -31,7 +31,7 @@ export const PageTitle = styled.h1`
 export const Description = styled.p`
   font-family: "Paragraph";
   color: #333;
-  font-size: 32px;
+  font-size: 28px;
   letter-spacing: 1px;
 
   @media (max-width: ${spacing.PHONE_WIDTH}) {
@@ -132,6 +132,7 @@ export const HeroImage = styled.div`
   border-radius: 4px;
   margin-right: ${spacing.DOUBLE_BASE_SPACING};
   margin-left: ${spacing.BASE_SPACING};
+  flex-shrink: 0;
 
   @media (max-width: ${spacing.PHONE_WIDTH}) {
     margin-top: ${spacing.DOUBLE_BASE_SPACING};

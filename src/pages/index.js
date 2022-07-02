@@ -45,7 +45,7 @@ const IndexPage = () => {
             <Button onClick={() => (window.location = "/services")}>
               Kelas Kami
             </Button>
-            <Button onClick={() => (window.location = "/online")}>
+            <Button onClick={() => (window.location = "/about")}>
               Tentang Kami
             </Button>
             <Button onClick={() => (window.location = "/online")}>
