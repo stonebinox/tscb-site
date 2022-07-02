@@ -28,7 +28,7 @@ const IndexPage = () => {
     heroImage: {
       file: { url, fileName },
     },
-    photos = [],
+    photoGrid: { photo: photos = [] },
   } = useHomePage("home");
 
   return (

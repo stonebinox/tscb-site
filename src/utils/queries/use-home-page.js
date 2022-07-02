@@ -19,9 +19,11 @@ export const useHomePage = (type) => {
             }
           }
           key
-          photos {
-            url
-            title
+          photoGrid {
+            photo {
+              url
+              filename
+            }
           }
         }
       }
