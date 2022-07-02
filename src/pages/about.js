@@ -13,6 +13,7 @@ import {
 import Seo from "../components/seo";
 import { useAboutPage } from "../utils/queries/use-about-page";
 import Logo from "../images/logo.png";
+import { Footer } from "../components/footer";
 
 const AboutPage = () => {
   const {
@@ -40,7 +41,9 @@ const AboutPage = () => {
             <Button onClick={() => (window.location = "/services")}>
               Kelas Kami
             </Button>
-            <Button>Hubungi Kami</Button>
+            <Button onClick={() => (window.location = "/contact")}>
+              Hubungi Kami
+            </Button>
           </div>
           <HeroImage
             style={{
@@ -50,6 +53,7 @@ const AboutPage = () => {
           />
         </ContentContainer>
       </PageContent>
+      <Footer />
     </PageContainer>
   );
 };

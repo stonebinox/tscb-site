@@ -16,6 +16,7 @@ import Seo from "../components/seo";
 import { useServicesPage } from "../utils/queries/use-services-page";
 import Logo from "../images/logo.png";
 import { spacing } from "../utils/spacing";
+import { Footer } from "../components/footer";
 
 const ServiceContainer = styled.div`
   width: 100%;
@@ -29,6 +30,14 @@ const ServiceContainer = styled.div`
   align-items: center;
   background-color: ${({ num }) =>
     num % 2 === 0 ? "rgba(0, 0, 0, 0.03)" : "#fff"};
+
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
+    flex-direction: column-reverse;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: ${spacing.BASE_SPACING};
+    padding-bottom: ${spacing.BASE_SPACING};
+  }
 `;
 
 const ItemDescription = styled(Description)`
@@ -37,6 +46,10 @@ const ItemDescription = styled(Description)`
 
 const ListContainer = styled.div`
   margin-top: ${spacing.customSpacing("128px")};
+
+  @media (max-width: ${spacing.PHONE_WIDTH}) {
+    margin-top: 0;
+  }
 `;
 
 const ServicesPage = () => {
@@ -69,7 +82,9 @@ const ServicesPage = () => {
                       __html: documentToHtmlString(JSON.parse(raw)),
                     }}
                   />
-                  <Button>Hubungi Kami</Button>
+                  <Button onClick={() => (window.location = "/contact")}>
+                    Hubungi Kami
+                  </Button>
                 </div>
                 <div>
                   <HeroImage
@@ -84,6 +99,7 @@ const ServicesPage = () => {
           })}
         </ListContainer>
       </PageContent>
+      <Footer />
     </PageContainer>
   );
 };
