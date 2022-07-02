@@ -14,6 +14,7 @@ import Seo from "../components/seo";
 import { useAboutPage } from "../utils/queries/use-about-page";
 import Logo from "../images/logo.png";
 import { Footer } from "../components/footer";
+import { PhotoGrid } from "../components/photo-grid";
 
 const AboutPage = () => {
   const {
@@ -22,6 +23,7 @@ const AboutPage = () => {
     image: {
       file: { fileName, url },
     },
+    photoGrid: { photo: photos = [] },
   } = useAboutPage();
 
   return (
@@ -52,6 +54,7 @@ const AboutPage = () => {
             }}
           />
         </ContentContainer>
+        <PhotoGrid photos={photos} />
       </PageContent>
       <Footer />
     </PageContainer>

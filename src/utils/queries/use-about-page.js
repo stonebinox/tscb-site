@@ -17,6 +17,12 @@ export const useAboutPage = (type) => {
               url
             }
           }
+          photoGrid {
+            photo {
+              url
+              filename
+            }
+          }
         }
       }
     }

@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import {
   Button,
@@ -8,17 +7,15 @@ import {
   PageContent,
   PageTitle,
   LogoContainer,
-  PhotosContainer,
-  Photo,
   ContentContainer,
   HeroImage,
 } from "../components/common.styles";
 import Seo from "../components/seo";
 import { useHomePage } from "../utils/queries/use-home-page";
-import { spacing } from "../utils/spacing";
 import Logo from "../images/logo.png";
 import "../fonts/fonts.css";
 import { Footer } from "../components/footer";
+import { PhotoGrid } from "../components/photo-grid";
 
 const IndexPage = () => {
   const {
@@ -59,17 +56,7 @@ const IndexPage = () => {
             }}
           />
         </ContentContainer>
-        <PhotosContainer>
-          {photos?.map((photo, index) => (
-            <Photo
-              key={index}
-              style={{
-                background: `url(${photo.url}) center`,
-                backgroundSize: "cover",
-              }}
-            />
-          ))}
-        </PhotosContainer>
+        <PhotoGrid photos={photos} />
       </PageContent>
       <Footer />
     </PageContainer>
