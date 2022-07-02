@@ -38,7 +38,7 @@ export const HeroImage = styled.div`
   height: 300px;
   border: 2px solid #fff;
   overflow: hidden;
-  box-shadow: 0px 2px 20px #888;
+  box-shadow: 0px 5px 10px #888;
   border-radius: 4px;
   margin-right: ${spacing.DOUBLE_BASE_SPACING};
   margin-left: ${spacing.BASE_SPACING};
@@ -72,10 +72,13 @@ const IndexPage = () => {
             <PageTitle>{title}</PageTitle>
             <Description dangerouslySetInnerHTML={{ __html: description }} />
             <Button onClick={() => (window.location = "/offline")}>
-              Kelas Offline
+              Kelas Kami
             </Button>
             <Button onClick={() => (window.location = "/online")}>
-              Kelas Online
+              Tentang Kami
+            </Button>
+            <Button onClick={() => (window.location = "/online")}>
+              Workshop Dan Kontak
             </Button>
           </div>
           <HeroImage

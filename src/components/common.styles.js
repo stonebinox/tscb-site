@@ -45,13 +45,21 @@ export const Button = styled.button`
   font-size: 32px;
   text-transform: uppercase;
   color: #fff;
-  border: 0;
+  border: 1px solid #000;
   padding: ${spacing.BASE_SPACING};
   letter-spacing: 1px;
   outline: 0;
   margin-right: ${spacing.BASE_SPACING};
   cursor: pointer;
   margin-bottom: ${spacing.BASE_SPACING};
+  transition: all 0.5s ease;
+
+  :hover {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    box-shadow: 0px 5px 5px #888;
+  }
 `;
 
 export const Footer = styled.div`
@@ -93,4 +101,9 @@ export const Photo = styled.div`
   margin-right: ${spacing.BASE_SPACING};
   margin-bottom: ${spacing.BASE_SPACING};
   border-radius: 4px;
+  transition: all 0.5s ease;
+
+  :hover {
+    box-shadow: 0px 5px 10px #888;
+  }
 `;
