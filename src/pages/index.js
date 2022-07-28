@@ -10,8 +10,8 @@ import {
   ContentContainer,
   HeroImage,
 } from "../components/common.styles";
-import Seo from "../components/seo";
 import { useHomePage } from "../utils/queries/use-home-page";
+import Seo from "../components/seo";
 import Logo from "../images/logo.png";
 import "../fonts/fonts.css";
 import { Footer } from "../components/footer";
